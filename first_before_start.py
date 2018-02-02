@@ -17,6 +17,6 @@ def done ():
         if i.isalpha() is True:
             average.append(i)
 
-    return (collections.Counter(average).most_common(10))
+    return [row[0] for row in (collections.Counter(average).most_common(10))]
 
 print(done())
