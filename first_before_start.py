@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import start
+import collections
 
 def done ():
 
@@ -15,12 +16,7 @@ def done ():
     for i in zum:
         if i.isalpha() is True:
             average.append(i)
-    modify = set(average)
-    average_new = list(modify)
-    average_new.sort( key = len, reverse = True)
 
-    well_done = average_new[:10]
-
-    return well_done
+    return (collections.Counter(average).most_common(10))
 
 print(done())
